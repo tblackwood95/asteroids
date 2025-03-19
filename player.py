@@ -33,7 +33,6 @@ class Player(CircleShape):
 
         if self.timer > 0:
             self.timer -= dt
-            print(self.timer)
         if keys[pygame.K_a]:
             self.rotate(-dt)
         if keys[pygame.K_d]:
@@ -58,6 +57,6 @@ class Player(CircleShape):
             new_shot.velocity = direction * PLAYER_SHOOT_SPEED
             self.shots.add(new_shot)
             self.timer = PLAYER_SHOOT_COOLDOWN
-            print("Shot fired! Timer reset to:", self.timer)
+            
         
         
